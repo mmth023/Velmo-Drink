@@ -377,5 +377,50 @@
         setInterval(updateTimer, 1000);
         updateTimer();
     </script>
-</body>
+    <div id="socialProof" style="position: fixed; bottom: -100px; left: 20px; background-color: #ffffff; color: #1a1a1a; padding: 12px 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); display: flex; align-items: center; gap: 15px; z-index: 9999; transition: bottom 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); max-width: 320px; font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;">
+        <div style="background-color: #e6f9ed; color: #25D366; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+        <div style="font-size: 13px; line-height: 1.4;">
+            <span id="socialProofText"><b>Mariana S.</b> de São Paulo/SP comprou o produto.</span>
+            <span id="socialProofTime" style="font-size: 11px; color: #777; display: block; margin-top: 2px;">há 2 minutos</span>
+        </div>
+    </div>
+
+    <script>
+        const nomes = [
+            "Ana B.", "Carlos S.", "Mariana T.", "Felipe M.", "Juliana R.", "Marcos V.", "Beatriz P.", 
+            "Lucas N.", "Sandra C.", "Rodrigo A.", "Gabriela F.", "Amanda L.", "Ricardo M.", "Patricia K.",
+            "Gustavo H.", "Fernanda O.", "Thiago D.", "Camila G.", "Bruno E.", "Larissa R.", "Diego C.",
+            "Aline M.", "Leonardo P.", "Vanessa S.", "Gabriel O.", "Jessica T.", "Rafael F.", "Leticia C.",
+            "Marcelo B.", "Caroline A.", "Danilo G.", "Renata P.", "Guilherme F.", "Isabela D.", "Douglas S.",
+            "Priscila M.", "Eduardo R.", "Tatiane K.", "Arthur H.", "Vivian V.", "Matheus L.", "Daniela J.",
+            "Vinicius P.", "Monique F.", "Caio T.", "Natalia G.", "Renan B.", "Bianca M.", "Fabio S.", "Eliane R."
+        ];
+        
+        const tempos = ["há 1 minuto", "há 3 minutos", "acabou de comprar", "há 5 minutos", "há 32 segundos", "há 2 minutos", "há 45 segundos", "há 4 minutos"];
+
+        const popup = document.getElementById('socialProof');
+        const textElement = document.getElementById('socialProofText');
+        const timeElement = document.getElementById('socialProofTime');
+
+        function mostrarNotificacao() {
+            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+            const cidadeAleatoria = cidades[Math.floor(Math.random() * cidades.length)];
+            const tempoAleatorio = tempos[Math.floor(Math.random() * tempos.length)];
+
+            textElement.innerHTML = `<b>${nomeAleatorio}</b> de ${cidadeAleatoria} comprou o produto.`;
+            timeElement.innerText = tempoAleatorio;
+
+            popup.style.bottom = "20px";
+
+            setTimeout(() => {
+                popup.style.bottom = "-100px";
+            }, 4000);
+        }
+
+        setTimeout(mostrarNotificacao, 3000);
+        setInterval(mostrarNotificacao, 10000);
+    </script>
+    </body>
 </html>
