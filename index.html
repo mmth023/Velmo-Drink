@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Velmora | Velmo Black Drink</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .bg-dark-card { background-color: #111111; }
+        .bg-dark-card-hover { background-color: #1a1a1a; }
+        .text-accent-yellow { color: #f5c518; }
+        .bg-accent-yellow { background-color: #f5c518; }
+        .border-accent-yellow { border-color: #f5c518; }
+        .text-accent-teal { color: #00c9a7; }
+        .bg-accent-teal { background-color: #00c9a7; }
+        .tab-active { border-color: #f5c518; background-color: rgba(245, 197, 24, 0.1); color: #f5c518; }
+        .hidden-tab { display: none !important; }
+        
+        /* Torna o fundo branco da imagem transparente sem alterar o produto */
+        .img-blend-multiply { 
+            mix-blend-mode: multiply;
+            filter: contrast(1.05); /* Ajuste sutil para garantir nitidez */
+        }
+        
+        /* Container com fundo branco sutil ou cinza bem claro para o blend funcionar perfeitamente em telas escuras */
+        .img-container-fix {
+            background-color: #ffffff;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. TOP BANNER (Sticky Header) -->
+    <header class="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-gray-800 py-4 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl sm:text-2xl font-black tracking-wider text-white">ESPAÇO VELMORA</span>
+                <span class="text-xl">🍓</span>
+            </div>
+            <span class="text-xs sm:text-sm text-gray-400 font-medium hidden sm:inline">Revendedor Autorizado</span>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative overflow-hidden pt-12 pb-20 px-4 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#0a0a0a]">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-8 leading-tight">
+                Velmo Black Drink <br>
+                <span class="text-accent-yellow">— O Emagrecedor Natural Nº 1 do Brasil —</span>
+            </h1>
+            
+            <div class="inline-block text-left space-y-4 mb-12 max-w-md mx-auto bg-[#161616] p-6 rounded-2xl border border-gray-800 w-full">
+                <div class="flex items-center space-x-3">
+                    <span class="text-accent-teal text-xl"><i class="fas fa-check-circle"></i></span>
+                    <span class="text-gray-200 font-semibold sm:text-lg">Reduz celulite e estrias</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="text-accent-teal text-xl"><i class="fas fa-check-circle"></i></span>
+                    <span class="text-gray-200 font-semibold sm:text-lg">Perca peso de forma natural</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="text-accent-teal text-xl"><i class="fas fa-check-circle"></i></span>
+                    <span class="text-gray-200 font-semibold sm:text-lg">Efeito 10X mais potente</span>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="#sabores" class="bg-accent-yellow hover:bg-[#dfb211] text-black font-black text-lg sm:text-xl px-10 py-5 rounded-full shadow-lg shadow-yellow-500/10 transform hover:scale-105 transition duration-300 tracking-wider">
+                    QUERO EMAGRECER
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BENEFITS SECTION -->
+    <section class="py-20 px-4 bg-[#111111]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl sm:text-4xl font-black text-center mb-12 uppercase tracking-wide">
+                Conheça os principais Benefícios do <span class="text-accent-teal">Velmo Black Drink</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-800 transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl mb-4 text-accent-yellow"><i class="fas fa-fire"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Queima gordura rápido</h3>
+                    <p class="text-gray-400 leading-relaxed">Estimula o metabolismo e potencializa a queima de gordura corporal de forma acelerada.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-800 transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl mb-4 text-accent-yellow"><i class="fas fa-utensils"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Controla o apetite</h3>
+                    <p class="text-gray-400 leading-relaxed">Reduz drasticamente a vontade de beliscar doces e facilita o foco total na sua dieta.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-800 transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl mb-4 text-accent-yellow"><i class="fas fa-ruler-horizontal"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Reduz medidas</h3>
+                    <p class="text-gray-400 leading-relaxed">Auxilia na redução marcante de gordura localizada e melhora visivelmente o contorno corporal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. URGENCY ALERT BANNER -->
+    <section class="bg-amber-950/40 border-y border-amber-500/30 py-4 px-4 text-center">
+        <p class="text-amber-400 text-sm sm:text-base font-bold max-w-4xl mx-auto tracking-wide">
+            ⚠️ ATENÇÃO: Evite cair em golpes! O Velmo Black Drink é vendido exclusivamente por representantes autorizados. Não adquira em marketplaces.
+        </p>
+    </section>
+
+    <!-- 5. FLAVOR + OFFERS SECTION -->
+    <section id="sabores" class="py-20 px-4 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-accent-yellow uppercase mb-3">ESCOLHA O SEU TRATAMENTO</h2>
+                <p class="text-gray-400 text-lg sm:text-xl">A transformação definitiva do seu corpo começa agora</p>
+                
+                <!-- Countdown Timer -->
+                <div class="mt-6 inline-block bg-red-950/50 border border-red-500/30 text-red-400 font-mono font-bold px-6 py-2 rounded-full text-sm sm:text-base tracking-wider animate-pulse">
+                    ⏱️ ATENÇÃO: ESSA OFERTA TERMINA EM: <span id="timer">23:59:59</span>
+                </div>
+            </div>
+
+            <!-- Flavor Tabs Trigger -->
+            <div class="flex justify-center space-x-4 mb-12 max-w-md mx-auto">
+                <button id="btn-morango" onclick="switchFlavor('morango')" class="flex-1 py-4 px-6 text-center font-black rounded-xl border border-gray-800 transition duration-300 flex items-center justify-center space-x-2 bg-[#111111] text-gray-400 tab-active">
+                    <span>🍓</span> <span>MORANGO</span>
+                </button>
+                <button id="btn-tangerina" onclick="switchFlavor('tangerina')" class="flex-1 py-4 px-6 text-center font-black rounded-xl border border-gray-800 transition duration-300 flex items-center justify-center space-x-2 bg-[#111111] text-gray-400">
+                    <span>🍊</span> <span>TANGERINA</span>
+                </button>
+            </div>
+
+            <!-- ================= MORANGO TAB CONTENT ================= -->
+            <div id="tab-morango" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Card 1: 1 Mês -->
+                <div class="bg-[#111111] rounded-2xl p-6 border-2 border-red-500/20 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <span class="absolute top-4 right-4 bg-red-500/10 text-red-400 text-xs font-black px-3 py-1 rounded-full border border-red-500/20">TRATAMENTO 1 MÊS</span>
+                        <div class="h-64 flex items-center justify-center mb-6 mt-4 img-container-fix p-2">
+                            <img src="https://api.hest.com.br/products/20260415202643309.png" alt="Velmo Black Drink Morango - 1 Mês" class="max-h-full max-w-full object-contain img-blend-multiply">
+                        </div>
+                        <h3 class="text-xl font-black text-white mb-2">Pote 1 Mês — Morango</h3>
+                        <p class="text-2xl font-black text-accent-yellow mb-1">12X de R$ 24,66</p>
+                        <p class="text-sm text-gray-400 mb-4">ou R$ 209,90 à vista</p>
+                    </div>
+                    <div>
+                        <div class="text-accent-teal text-xs font-bold mb-4 flex items-center gap-1">
+                            <i class="fas fa-truck-moving"></i> ✅ FRETE GRÁTIS
+                        </div>
+                        <a href="https://pay.hest.com.br/b1b01daf-0884-4d29-82e3-b442f2d46a23" target="_blank" class="block w-full bg-accent-yellow hover:bg-[#dfb211] text-black text-center font-black py-4 rounded-xl transition duration-300 tracking-wide uppercase">
+                            COMPRAR AGORA
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: 3 Meses -->
+                <div class="bg-[#111111] rounded-2xl p-6 border-2 border-accent-yellow flex flex-col justify-between relative overflow-hidden shadow-xl shadow-yellow-500/5">
+                    <div class="absolute top-0 left-0 right-0 bg-accent-yellow text-black text-center font-black text-xs py-1 uppercase tracking-wider">🔥 MAIS POPULAR</div>
+                    <div>
+                        <span class="absolute top-8 right-4 bg-yellow-500/10 text-accent-yellow text-xs font-black px-3 py-1 rounded-full border border-yellow-500/20">COMPRE 2 LEVE 3 — 3 MESES</span>
+                        <div class="h-64 flex items-center justify-center mb-6 mt-8 img-container-fix p-2">
+                            <img src="https://api.hest.com.br/products/20260416105846957.jpeg" alt="Velmo Black Drink Morango - 3 Meses" class="max-h-full max-w-full object-contain img-blend-multiply">
+                        </div>
+                        <h3 class="text-xl font-black text-white mb-2">Pote 3 Meses — Tratamento Intermediário</h3>
+                        <p class="text-2xl font-black text-accent-yellow mb-1">12X de R$ 34,45</p>
+                        <p class="text-sm text-gray-400 mb-4">ou R$ 335,70 à vista</p>
+                    </div>
+                    <div>
+                        <div class="text-accent-teal text-xs font-bold mb-4 flex items-center gap-1">
+                            <i class="fas fa-truck-moving"></i> ✅ FRETE GRÁTIS
+                        </div>
+                        <a href="https://pay.hest.com.br/472553a8-5504-4d98-829c-9fba09b410c2" target="_blank" class="block w-full bg-accent-yellow hover:bg-[#dfb211] text-black text-center font-black py-4 rounded-xl transition duration-300 tracking-wide uppercase">
+                            COMPRAR AGORA
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: 5 Meses -->
+                <div class="bg-[#111111] rounded-2xl p-6 border-2 border-gray-800 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 bg-accent-teal text-black text-center font-black text-xs py-1 uppercase tracking-wider">MELHOR CUSTO-BENEFÍCIO</div>
+                    <div>
+                        <span class="absolute top-8 right-4 bg-teal-500/10 text-accent-teal text-xs font-black px-3 py-1 rounded-full border border-teal-500/20">COMPRE 3 LEVE 5 — 5 MESES</span>
+                        <div class="h-64 flex items-center justify-center mb-6 mt-8 img-container-fix p-2">
+                            <img src="https://api.hest.com.br/products/20260416110232298.jpeg" alt="Velmo Black Drink Morango - 5 Meses" class="max-h-full max-w-full object-contain img-blend-multiply">
+                        </div>
+                        <h3 class="text-xl font-black text-white mb-2">Pote 5 Meses — Tratamento Avançado</h3>
+                        <p class="text-2xl font-black text-accent-yellow mb-1">12X de R$ 47,28</p>
+                        <p class="text-sm text-gray-400 mb-4">ou R$ 461,50 à vista</p>
+                    </div>
+                    <div>
+                        <div class="text-accent-teal text-xs font-bold mb-4 flex items-center gap-1">
+                            <i class="fas fa-truck-moving"></i> ✅ FRETE GRÁTIS
+                        </div>
+                        <a href="https://pay.hest.com.br/72627220-0f8f-4b6d-bc11-ccfeceb839b1" target="_blank" class="block w-full bg-accent-yellow hover:bg-[#dfb211] text-black text-center font-black py-4 rounded-xl transition duration-300 tracking-wide uppercase">
+                            COMPRAR AGORA
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: 12 Meses -->
+                <div class="bg-[#111111] rounded-2xl p-6 border-2 border-gray-800 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <span class="absolute top-4 right-4 bg-gray-800 text-gray-300 text-xs font-black px-3 py-1 rounded-full border border-gray-700">COMPRE 8 LEVE 12 — 1 ANO</span>
+                        <div class="h-64 flex items-center justify-center mb-6 mt-4 img-container-fix p-2">
+                            <img src="https://api.hest.com.br/products/20260416110232298.jpeg" alt="Velmo Black Drink Morango - 12 Meses" class="max-h-full max-w-full object-contain img-blend-multiply">
+                        </div>
+                        <h3 class="text-xl font-black text-white mb-2">Pote 12 Meses — Tratamento Máximo</h3>
+                        <p class="text-2xl font-black text-accent-yellow mb-1">12X de R$ 87,11</p>
+                        <p class="text-sm text-gray-400 mb-4">ou R$ 851,80 à vista</p>
+                    </div>
+                    <div>
+                        <div class="text-accent-teal text-xs font-bold mb-4 flex items-center gap-1">
+                            <i class="fas fa-truck-moving"></i> ✅ FRETE GRÁTIS
+                        </div>
+                        <a href="https://pay.hest.com.br/72627220-0f8f-4b6d-bc11-ccfeceb839b1" target="_blank" class="block w-full bg-accent-yellow hover:bg-[#dfb211] text-black text-center font-black py-4 rounded-xl transition duration-300 tracking-wide uppercase">
+                            COMPRAR AGORA
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= TANGERINA TAB CONTENT ================= -->
+            <div id="tab-tangerina" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto hidden-tab">
+                <!-- Card 1: 1 Mês -->
+                <div class="bg-[#111111] rounded-2xl p-6 border-2 border-orange-500/20 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <span class="absolute top-4 right-4 bg-orange-500/10 text-orange-400 text-xs font-black px-3 py-1 rounded-full border border-orange-500/20">TRATAMENTO 1 MÊS</span>
+                        <div class="h-64 flex items-center justify-center mb-6 mt-4 img-container-fix p-2">
+                            <img src="https://api.hest.com.br/products/20260415161016588.jpeg" alt="Velmo Black Drink Tangerina - 1 Mês" class="max-h-full max-w-full object-contain img-blend-multiply">
+                        </div>
+                        <h3 class="text-xl font-black text-white mb-2">Pote 1 Mês — Tangerina</h3>
+                        <p class="text-2xl font-black text-accent-yellow mb-1">12X de R$ 24,66</p>
+                        <p class="text-sm text-gray-400 mb-4">ou R$ 209,90 à vista</p>
+                    </div>
+                    <div>
+                        <div class="text-accent-teal text-xs font-bold mb-4 flex items-center gap-1">
+                            <i class="fas fa-truck-moving"></i> ✅ FRETE GRÁTIS
+                        </div>
+                        <a href="https://pay.hest.com.br/97c6ec56-d3cf-40bc-8cc3-9b11f5080ca6" target="_blank" class="block w-full bg-accent-yellow hover:bg-[#dfb211] text-black text-center font-black py-4 rounded-xl transition duration-300 tracking-wide uppercase">
+                            COMPRAR AGORA
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: 3 Meses -->
+                <div class="bg-[#111111] rounded-2xl p-6 border-2 border-accent-yellow flex flex-col justify-between relative overflow-hidden shadow-xl shadow-yellow-500/5">
+                    <div class="absolute top-0 left-0 right-0 bg-accent-yellow text-black text-center font-black text-xs py-1 uppercase tracking-wider">🔥 MAIS POPULAR</div>
+                    <div>
+                        <span class="absolute top-8 right-4 bg-yellow-500/10 text-accent-yellow text-xs font-black px-3 py-1 rounded-full border border-yellow-500/20">COMPRE 2 LEVE 3 — 3 MESES</span>
+                        <div class="h-64 flex items-center justify-center mb-6 mt-8 img-container-fix p-2">
+                            <img src="https://lh3.googleusercontent.com/d/1CzRQpVQZ_BVpUwSm2nJEyrcGp-s366ja" alt="Velmo Black Drink Tangerina - 3 Meses" class="max-h-full max-w-full object-contain img-blend-multiply">
+                        </div>
+                        <h3 class="text-xl font-black text-white mb-2">Pote 3 Meses — Tratamento Intermediário</h3>
+                        <p class="text-2xl font-black text-accent-yellow mb-1">12X de R$ 34,45</p>
+                        <p class="text-sm text-gray-400 mb-4">ou R$ 335,70 à vista</p>
+                    </div>
+                    <div>
+                        <div class="text-accent-teal text-xs font-bold mb-4 flex items-center gap-1">
+                            <i class="fas fa-truck-moving"></i> ✅ FRETE GRÁTIS
+                        </div>
+                        <a href="https://pay.hest.com.br/8fedf704-6186-4582-9885-929f05346b31" target="_blank" class="block w-full bg-accent-yellow hover:bg-[#dfb211] text-black text-center font-black py-4 rounded-xl transition duration-300 tracking-wide uppercase">
+                            COMPRAR AGORA
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: 5 Meses -->
+                <div class="bg-[#111111] rounded-2xl p-6 border-2 border-gray-800 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 bg-accent-teal text-black text-center font-black text-xs py-1 uppercase tracking-wider">MELHOR CUSTO-BENEFÍCIO</div>
+                    <div>
+                        <span class="absolute top-8 right-4 bg-teal-500/10 text-accent-teal text-xs font-black px-3 py-1 rounded-full border border-teal-500/20">COMPRE 3 LEVE 5 — 5 MESES</span>
+                        <div class="h-64 flex items-center justify-center mb-6 mt-8 img-container-fix p-2">
+                            <img src="https://lh3.googleusercontent.com/d/14a6mPo06WLuhRN2A6GNvkAn-It3JFyap" alt="Velmo Black Drink Tangerina - 5 Meses" class="max-h-full max-w-full object-contain img-blend-multiply">
+                        </div>
+                        <h3 class="text-xl font-black text-white mb-2">Pote 5 Meses — Tratamento Avançado</h3>
+                        <p class="text-2xl font-black text-accent-yellow mb-1">12X de R$ 47,28</p>
+                        <p class="text-sm text-gray-400 mb-4">ou R$ 461,50 à vista</p>
+                    </div>
+                    <div>
+                        <div class="text-accent-teal text-xs font-bold mb-4 flex items-center gap-1">
+                            <i class="fas fa-truck-moving"></i> ✅ FRETE GRÁTIS
+                        </div>
+                        <a href="https://pay.hest.com.br/e3007850-a71d-4212-888b-1ff9bac2129f" target="_blank" class="block w-full bg-accent-yellow hover:bg-[#dfb211] text-black text-center font-black py-4 rounded-xl transition duration-300 tracking-wide uppercase">
+                            COMPRAR AGORA
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: 12 Meses -->
+                <div class="bg-[#111111] rounded-2xl p-6 border-2 border-gray-800 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <span class="absolute top-4 right-4 bg-gray-800 text-gray-300 text-xs font-black px-3 py-1 rounded-full border border-gray-700">COMPRE 8 LEVE 12 — 1 ANO</span>
+                        <div class="h-64 flex items-center justify-center mb-6 mt-4 img-container-fix p-2">
+                            <img src="https://lh3.googleusercontent.com/d/14a6mPo06WLuhRN2A6GNvkAn-It3JFyap" alt="Velmo Black Drink Tangerina - 12 Meses" class="max-h-full max-w-full object-contain img-blend-multiply">
+                        </div>
+                        <h3 class="text-xl font-black text-white mb-2">Pote 12 Meses — Tratamento Máximo</h3>
+                        <p class="text-2xl font-black text-accent-yellow mb-1">12X de R$ 87,11</p>
+                        <p class="text-sm text-gray-400 mb-4">ou R$ 851,80 à vista</p>
+                    </div>
+                    <div>
+                        <div class="text-accent-teal text-xs font-bold mb-4 flex items-center gap-1">
+                            <i class="fas fa-truck-moving"></i> ✅ FRETE GRÁTIS
+                        </div>
+                        <a href="https://pay.hest.com.br/6285aed0-1e0d-4bbc-acff-700a2add7f8b" target="_blank" class="block w-full bg-accent-yellow hover:bg-[#dfb211] text-black text-center font-black py-4 rounded-xl transition duration-300 tracking-wide uppercase">
+                            COMPRAR AGORA
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WhatsApp Central Button -->
+            <div class="mt-16 text-center">
+                <a href="https://wa.me/554792323856" target="_blank" class="inline-flex items-center space-x-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-base sm:text-lg px-8 py-4 rounded-xl transform hover:scale-105 transition duration-300 shadow-xl shadow-green-500/10">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>💬 FALAR COM UM ESPECIALISTA</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. ABOUT SECTION -->
+    <section class="py-20 px-4 bg-[#111111] border-t border-gray-800">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-4xl font-black mb-6 uppercase tracking-wide">Velmo Black Drink: Emagreça com Saúde e Praticidade</h2>
+            <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
+                Velmo Black Drink é a solução ideal para quem deseja emagrecer com praticidade, saúde e eficiência, sem passar fome ou depender de treinos intensos. Sua fórmula auxilia o metabolismo, contribui para a queima de gordura, ajuda no controle do apetite e na redução do inchaço.
+            </p>
+        </div>
+    </section>
+
+    <!-- 7. STICKY WHATSAPP BUTTON (Floating) -->
+    <a href="https://wa.me/554792323856" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-4 py-3 rounded-full flex items-center space-x-2 shadow-2xl transition duration-300 transform hover:scale-105 text-sm sm:text-base">
+        <i class="fab fa-whatsapp text-xl sm:text-2xl"></i>
+        <span>Fale com a especialista</span>
+    </a>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-[#0a0a0a] border-t border-gray-900 py-8 text-center text-xs sm:text-sm text-gray-600">
+        <p>Todos os direitos reservados &copy; 2026</p>
+    </footer>
+
+    <!-- INTERACTION SCRIPTS -->
+    <script>
+        function switchFlavor(flavor) {
+            const tabMorango = document.getElementById('tab-morango');
+            const tabTangerina = document.getElementById('tab-tangerina');
+            const btnMorango = document.getElementById('btn-morango');
+            const btnTangerina = document.getElementById('btn-tangerina');
+
+            if (flavor === 'morango') {
+                tabMorango.classList.remove('hidden-tab');
+                tabTangerina.classList.add('hidden-tab');
+                btnMorango.classList.add('tab-active');
+                btnTangerina.classList.remove('tab-active');
+            } else {
+                tabTangerina.classList.remove('hidden-tab');
+                tabMorango.classList.add('hidden-tab');
+                btnTangerina.classList.add('tab-active');
+                btnMorango.classList.remove('tab-active');
+            }
+        }
+
+        function updateTimer() {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
+
+            const diff = midnight - now;
+
+            const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+            const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+            const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+            document.getElementById('timer').innerText = `${hours}:${minutes}:${seconds}`;
+        }
+        
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
