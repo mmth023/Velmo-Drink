@@ -26,7 +26,7 @@
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <span class="text-xl sm:text-2xl font-black tracking-wider text-white">ESPAÇO VELMORA</span>
-                <span class="text-xl">🍓</span>
+                <span class="text-xl">🍓🍊</span>
             </div>
             <span class="text-xs sm:text-sm text-gray-400 font-medium hidden sm:inline">Revendedor Autorizado</span>
         </div>
@@ -287,9 +287,9 @@
             </div>
 
             <div class="mt-16 text-center">
-                <a href="https://wa.me/554792323856?text=Ol%C3%A1%2C%20vim%20pelo%20anuncio%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20produto" target="_blank" class="inline-flex items-center space-x-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-base sm:text-lg px-8 py-4 rounded-xl transform hover:scale-105 transition duration-300 shadow-xl shadow-green-500/10">
+                <a href="https://wa.me/554792323856?text=Ol%C3%A1%20Thais%2C%20QUERO%20DESCONTO%20DE%2020%25" target="_blank" class="inline-flex items-center space-x-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-base sm:text-lg px-8 py-4 rounded-xl transform hover:scale-105 transition duration-300 shadow-xl shadow-green-500/10">
                     <i class="fab fa-whatsapp text-2xl"></i>
-                    <span>💬 FALAR COM UM ESPECIALISTA</span>
+                    <span>QUERO DESCONTO DE 20%</span>
                 </a>
             </div>
         </div>
@@ -300,15 +300,17 @@
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-2xl sm:text-4xl font-black mb-6 uppercase tracking-wide">Velmo Black Drink: Emagreça com Saúde e Praticidade</h2>
             <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
-                Velmo Black Drink é a solução ideal para quem deseja emagrecer com praticidade, saúde e eficiência, sem passar fome ou depender de treinos intensos. Sua fórmula auxilia o metabolismo, contribui para a queima de gordura, ajuda no controle do apetite e na redução do inchaço.
+                Velmo Black Drink foi desenvolvido para complementar uma rotina de bem-estar, oferecendo uma fórmula prática para quem busca mais equilíbrio no dia a dia. Sua composição reúne ingredientes cuidadosamente selecionados para acompanhar hábitos saudáveis, auxiliando na sensação de leveza, disposição e cuidado com o corpo.
+
+Fácil de incluir na rotina, Velmo Black Drink é uma alternativa para quem deseja manter um estilo de vida mais saudável com praticidade e conveniência.
             </p>
         </div>
     </section>
 
     <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/554792323856" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-4 py-3 rounded-full flex items-center space-x-2 shadow-2xl transition duration-300 transform hover:scale-105 text-sm sm:text-base">
+    <a href="https://wa.me/554792323856?text=Ol%C3%A1%20Thais%2C%20QUERO%20DESCONTO%20DE%2020%25" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-4 py-3 rounded-full flex items-center space-x-2 shadow-2xl transition duration-300 transform hover:scale-105 text-sm sm:text-base">
         <i class="fab fa-whatsapp text-xl sm:text-2xl"></i>
-        <span>Fale com a especialista</span>
+        <span>ACHOU CARO? CLIQUE AQUI</span>
     </a>
 
     <!-- FOOTER -->
@@ -358,22 +360,69 @@
             <span id="socialProofText"><b>Mariana S.</b> de São Paulo/SP comprou o produto.</span>
             <span id="socialProofTime" style="font-size:11px;color:#777;display:block;margin-top:2px;">há 2 minutos</span>
         </div>
-    </div>
-    <script>
-        const nomes = ["Ana B.","Carlos S.","Mariana T.","Felipe M.","Juliana R.","Marcos V.","Beatriz P.","Lucas N.","Sandra C.","Rodrigo A.","Gabriela F.","Amanda L.","Ricardo M.","Patricia K.","Gustavo H.","Fernanda O.","Thiago D.","Camila G.","Bruno E.","Larissa R.","Diego C.","Aline M.","Leonardo P.","Vanessa S.","Gabriel O.","Jessica T.","Rafael F.","Leticia C.","Marcelo B.","Caroline A.","Danilo G.","Renata P.","Guilherme F.","Isabela D.","Douglas S.","Priscila M.","Eduardo R.","Tatiane K.","Arthur H.","Vivian V.","Matheus L.","Daniela J.","Vinicius P.","Monique F.","Caio T.","Natalia G.","Renan B.","Bianca M.","Fabio S.","Eliane R."];
-        const cidades = ["São Paulo/SP","Rio de Janeiro/RJ","Belo Horizonte/MG","Curitiba/PR","Salvador/BA","Fortaleza/CE","Manaus/AM","Recife/PE","Porto Alegre/RS","Goiânia/GO","Belém/PA","Florianópolis/SC","São Luís/MA","Maceió/AL","Natal/RN","Campo Grande/MS","Teresina/PI","João Pessoa/PB","Aracaju/SE","Cuiabá/MT","Macapá/AP","Porto Velho/RO","Palmas/TO","Rio Branco/AC","Boa Vista/RR","Vitória/ES","Campinas/SP","Santos/SP","Ribeirão Preto/SP","São José dos Campos/SP"];
-        const tempos = ["há 1 minuto","há 3 minutos","acabou de comprar","há 5 minutos","há 32 segundos","há 2 minutos","há 45 segundos","há 4 minutos"];
-        const popup = document.getElementById('socialProof');
-        const textEl = document.getElementById('socialProofText');
-        const timeEl = document.getElementById('socialProofTime');
-        function mostrarNotificacao() {
-            textEl.innerHTML = '<b>' + nomes[Math.floor(Math.random()*nomes.length)] + '</b> de ' + cidades[Math.floor(Math.random()*cidades.length)] + ' comprou o produto.';
-            timeEl.innerText = tempos[Math.floor(Math.random()*tempos.length)];
-            popup.style.bottom = '20px';
-            setTimeout(() => { popup.style.bottom = '-100px'; }, 4000);
-        }
-        setTimeout(mostrarNotificacao, 3000);
-        setInterval(mostrarNotificacao, 10000);
-    </script>
+   <script>
+
+const nomes = [
+"Maria","Ana","Juliana","Fernanda","Camila","Patricia","Amanda","Larissa",
+"Beatriz","Gabriela","Mariana","Vanessa","Jessica","Carolina","Renata",
+"Bruna","Aline","Tatiane","Priscila","Isabela","Monique","Natalia",
+"Bianca","Leticia","Daniela","Viviane","Paula","Eliane","Luciana",
+"Débora","Cristina","Elaine","Fabiana","Michele","Simone","Adriana",
+"Raquel","Sandra","Jaqueline","Kelly","Daiane","Rosana","Sabrina",
+"Brenda","Mayara","Thais","Vitória","Luana","Eduarda","Livia",
+"Milena","Yasmin","Nicole","Lorena","Valentina","Helena","Manuela",
+"Sophia","Alice","Clara","Melissa","Rafaela","Giovana","Evelyn",
+"Isadora","Larissa","Marcele","Tainá","Talita","Samara","Ariane"
+];
+
+const tempos = [
+"agora mesmo",
+"há 1 minuto",
+"há 2 minutos",
+"há 3 minutos",
+"há 4 minutos",
+"há 5 minutos",
+"acabou de comprar"
+];
+
+const popup = document.getElementById('socialProof');
+const textEl = document.getElementById('socialProofText');
+const timeEl = document.getElementById('socialProofTime');
+
+function mostrarNotificacao() {
+
+    const nome = nomes[Math.floor(Math.random() * nomes.length)];
+
+    const ofertas = [
+        "adquiriu o Tratamento de 1 Mês",
+        "adquiriu o Tratamento de 3 Meses",
+        "garantiu o Tratamento Intensivo de 3 Meses",
+
+        "adquiriu o Premium Tratamento 5 Meses",
+        "garantiu o Premium Tratamento 5 Meses",
+
+        "adquiriu o Lendário Tratamento 12 Meses",
+        "garantiu o Lendário Tratamento 12 Meses",
+        "acabou de comprar o Tratamento Supremo 12 Meses"
+    ];
+
+    textEl.innerHTML =
+        '<b>' + nome + '</b> ' +
+        ofertas[Math.floor(Math.random() * ofertas.length)];
+
+    timeEl.innerText =
+        tempos[Math.floor(Math.random() * tempos.length)];
+
+    popup.style.bottom = '20px';
+
+    setTimeout(() => {
+        popup.style.bottom = '-100px';
+    }, 4000);
+}
+
+setTimeout(mostrarNotificacao, 3000);
+setInterval(mostrarNotificacao, 12000);
+
+</script>
 </body>
 </html>
